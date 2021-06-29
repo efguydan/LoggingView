@@ -1,5 +1,5 @@
 # LoggingView
-![Android CI](https://github.com/efguydan/LoggingView/workflows/Android%20CI/badge.svg)
+[![Android CI](https://github.com/efguydan/LoggingView/actions/workflows/android_ci.yml/badge.svg)](https://github.com/efguydan/LoggingView/actions/workflows/android_ci.yml)
 
 LoggingView is a sample application to demo displaying your logs on an Android Application
 
