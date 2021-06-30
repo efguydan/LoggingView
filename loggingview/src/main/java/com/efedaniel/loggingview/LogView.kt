@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.ScrollView
 import android.widget.TextView
+import androidx.core.content.withStyledAttributes
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
@@ -16,10 +17,22 @@ class LogView @JvmOverloads constructor(
 ) : ScrollView(context, attrs, defStyle) {
 
     private val logTextView: TextView
+    var logLevel = "logcat -d"
 
     init {
         inflate(context, R.layout.custom_layout_log_view, this)
         logTextView = findViewById(R.id.logTextView)
+
+        context.withStyledAttributes(attrs, R.styleable.LogView) {
+            when (getInt(R.styleable.LogView_logLevel, 1)) {
+                1 -> logLevel = "logcat -v"
+                2 -> logLevel = "logcat -d"
+                3 -> logLevel = "logcat -i"
+                4 -> logLevel = "logcat -w"
+                5 -> logLevel = "logcat -e"
+                6 -> logLevel = "logcat -a"
+            }
+        }
     }
 
     override fun onFinishInflate() {

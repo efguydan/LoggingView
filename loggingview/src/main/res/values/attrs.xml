@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LogView">
+        <attr name="logLevel">
+            <enum name="verbose_logs" value="1" />
+            <enum name="debug_logs" value="2" />
+            <enum name="info_logs" value="3" />
+            <enum name="warn_logs" value="4" />
+            <enum name="error_logs" value="5" />
+            <enum name="assert_logs" value="6" />
+        </attr>
+    </declare-styleable>
+</resources>
