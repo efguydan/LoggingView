@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.efedaniel.loggingtextview.customview.LogView
+    <com.efedaniel.loggingview.LogView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

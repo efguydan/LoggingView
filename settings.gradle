@@ -1,2 +1,3 @@
 rootProject.name = "LoggingTextView"
 include ':app'
+include ':loggingview'
